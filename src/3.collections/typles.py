@@ -16,7 +16,8 @@
 
 '''
 
-tupl = ('a','b','c')
+tupl = ['a','b','c']   
+tupl.insert(1,1)
 
 # tupl[0] = 10 нельзя изменить элемент
 print(tupl[0])

@@ -9,20 +9,28 @@
 - после версии 3.7 словари хранят порядок добавления
 '''
 
-
 # Создание словаря
+
+empty_dict = {} # пустой словарь
+literal_dict = {1:1} # создание словря из литерала
+from_dict_func = dict ({"a":1,"b":1}) # {'a': 1, 'b': 1}
+d = dict(short='dict', long='dictionary') # {'short': 'dict', 'long': 'dictionary'
+#from_dict_func2 = dict (["a":1],["b":1])
+
+a1 = {1:"a",2:"b"}
+a1 = {1:"b",3:"b"} # Значения будут полностью перезаписаны
+
 person = {
     "name": "Eric",
-    #(1): ("Sten","Kenny","Kail") ОШИБКА
     (1,2): ['a','b','c']
 }
-
 
 keys = ["name", "age", "city"] # из списка
 defaults = dict.fromkeys(keys, None)
 
 empty_dict = dict() # Из списка кортежей (пар ключ-значение)
 pairs = [("name", "Anna"), ("age", 28), ("city", "Berlin")]
+
 
 # Методы словарей
 
@@ -39,16 +47,48 @@ print("name" in person) # проверка есть ли такой ключ
 del person["name"] # удаление элемента 
 
 person_keys = person.keys()
-print(type(person_keys)) # получаем набор ключей
+print((person_keys)) # получаем набор ключей
 
 items = person.items()
 print(type(items)) # получаем набор ключей
 
 
-# слияние словарей 
-dict1 = {"a": 1, "b": 2}
-dict2 = {"b": 3, "c": 4}
+# Слияние словарей 
 
-merged = dict1 | dict2
+dict1 = {"a":1,"c":3}
+dict2 = {"a":2,"d":3}
+merged = dict1 | dict2 # Если будут конфлиты dict2 перекроет dict1
+print(merged) # {'a': 2, 'c': 3, 'd': 3}
 
-# итерация по словарям 
+
+# Иттерация по словарям 
+
+mp = {
+    1:1,
+    "two":3,
+    (3):(1,2,3),
+}
+print(mp)
+
+for k, v in mp.items(): # иттерация по ключам/значениям
+    print(k,v)
+
+for k in mp.keys(): # иттерация по ключам
+    print(k)
+
+for k in mp: # иттерация по ключам 
+    print(k)
+
+for v in mp.values(): # иттерация по значениям
+    print(v)
+
+
+# API 
+# Создать словарь
+# Список словарей + Словарь списков + Словарь словарей
+# Перезаписать словарь
+# Добавить/изменить значение 
+# Удалить значение 
+# Проверить входит ли значени в мапу
+# Вытащить все ключи / все значения 
+# Сложить 2 словаря

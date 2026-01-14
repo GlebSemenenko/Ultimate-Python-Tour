@@ -1,3 +1,5 @@
+import random
+
 # The Wide-Mouthed frog! 8
 def mouth_size(animal):
     with_our_register = animal.lower()
@@ -37,4 +39,47 @@ def remove_bmw(string):
             string = string.replace(ch,"")
     return string
 
+# The Office I - Outed 7
+def outed(meet, boss):
+    count = 0
+    res = 0
+    for k, v in meet.items():
+        if k == boss:
+            v = v * 2
+        count += 1
+        res += v
+        print(count, res)
+    return res / count
 
+# The Office II - Boredom Score II 7
+def boredom(staff):
+    dep = {
+        "accounts": 1,
+        "finance": 2,
+        "canteen": 10,
+        "regulation": 3,
+        "change": 5,
+        "IS": 10
+    }
+    res = 0
+    for _, v in staff.items():
+        res +=dep[v] # достать значение по ключу и прибавить его к результату
+        print(res)
+
+# Rock Paper Scissors! 8
+def rps():
+    symbol = {1:"камень", 2:"бумага", 3:"ножницы"}
+    # рандомное число от 1 до 3
+    player1 = random.randint(1,3)
+    player2 = random.randint(1,3)
+    print(symbol[player1], symbol[player2])
+
+    if player1 == player2:
+        print("Ничья! Играем ещё раз.")
+        return rps()
+
+    wins = [(1, 3), (2, 1), (3, 2)]
+    if (player1, player2) in wins:
+        print(f"Победитель — Игрок 1 ({symbol[player1]})!")
+    else:
+        print(f"Победитель — Игрок 2 ({symbol[player2]})!")

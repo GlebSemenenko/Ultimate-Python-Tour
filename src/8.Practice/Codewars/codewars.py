@@ -31,7 +31,7 @@ def split_string( string ):
         appended = ""
     return result
 
-# Remove B M W 7
+# Remove BMW 7
 def remove_bmw(string):
     black_list = ["b","m","w","B","M","W"]
     for ch in string:
@@ -83,3 +83,50 @@ def rps():
         print(f"Победитель — Игрок 1 ({symbol[player1]})!")
     else:
         print(f"Победитель — Игрок 2 ({symbol[player2]})!")
+
+# Sum Arrays 8
+def sum_array(arr):
+    return sum(arr)
+
+# Number of Decimal Digits 7
+def digits(n):
+    return len(str(n))
+
+# Letterbox Paint-Squad 7
+def paint_letterboxes(start, finish):
+    result = {"0":0, "1":0, "2":0, "3":0, "4":0, "5":0, "6":0, "7":0, "8":0, "9":0}
+    while start <= finish:
+        print(start, finish)
+        str_value = str(start)
+        for ch in str_value:
+            if ch in result:
+                result[ch] = result[ch] + 1
+        start += 1
+    return result
+
+# Find the odd int 6
+def find_it(seq):
+    mp = {}
+    for n in seq: # Проверить кол-во вхождений каждого числа
+        if n in mp:
+            mp[n] += 1
+        else:
+            mp[n] = 1
+    for k, v in mp.items():
+        if v % 2 != 0:
+            return k
+    return -1\
+
+# max diff - easy 7
+def max_diff(lst):
+    return max(lst) - min(lst)
+
+# Sum of Multiples 8
+def sum_mul(n, m):
+    res = []
+    for i in range (n, m):
+        if i % n == 0:
+            res.append(i)
+    return sum(res)
+
+print(sum_mul(4, 123))

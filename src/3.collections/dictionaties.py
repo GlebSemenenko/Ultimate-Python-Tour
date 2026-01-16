@@ -14,7 +14,7 @@
 empty_dict = {} # пустой словарь
 literal_dict = {1:1} # создание словря из литерала
 from_dict_func = dict ({"a":1,"b":1}) # {'a': 1, 'b': 1}
-d = dict(short='dict', long='dictionary') # {'short': 'dict', 'long': 'dictionary'
+d = dict (short='dict', long='dictionary') # {'short': 'dict', 'long': 'dictionary'
 #from_dict_func2 = dict (["a":1],["b":1])
 
 a1 = {1:"a",2:"b"}

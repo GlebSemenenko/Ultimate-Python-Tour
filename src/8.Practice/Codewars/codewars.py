@@ -28,7 +28,6 @@ def split_string( string ):
     for i in range(0, len(string), 2):
         appended = string[i] + string[i+1]
         result.append(appended)
-        appended = ""
     return result
 
 # Remove BMW 7
@@ -80,9 +79,9 @@ def rps():
 
     wins = [(1, 3), (2, 1), (3, 2)]
     if (player1, player2) in wins:
-        print(f"Победитель — Игрок 1 ({symbol[player1]})!")
+        return symbol[player1]
     else:
-        print(f"Победитель — Игрок 2 ({symbol[player2]})!")
+        return symbol[player2]
 
 # Sum Arrays 8
 def sum_array(arr):
@@ -115,7 +114,7 @@ def find_it(seq):
     for k, v in mp.items():
         if v % 2 != 0:
             return k
-    return -1\
+    return -1
 
 # max diff - easy 7
 def max_diff(lst):
@@ -129,4 +128,56 @@ def sum_mul(n, m):
             res.append(i)
     return sum(res)
 
-print(sum_mul(4, 123))
+# Spanish DNI Validation Algorithm 7
+def is_valid_dni(s: str) -> bool:
+    num = int(s[:-1]) # сдедать валидацию (корректно ли введен аргумент
+    d = num % 23
+    dni_letter_map = {0: 'T', 1: 'R', 2: 'W', 3: 'A', 4: 'G', 5: 'M', 6: 'Y', 7: 'F', 8: 'P', 9: 'D', 10: 'X', 11: 'B',
+                      12: 'N', 13: 'J', 14: 'Z', 15: 'S', 16: 'Q', 17: 'V', 18: 'H', 19: 'L', 20: 'C', 21: 'K', 22: 'E'}
+    letter = dni_letter_map[d]
+    if letter == s[-1]:
+        return True
+    else:
+        return False
+
+# Don't give me five! 7
+def dont_give_me_five(start,end):
+    res = end - start + 1
+    print(res)
+    for n in range (start, end + 1):
+        if "5" in str(n):
+            print(n, "find")
+            res -= 1
+    return res
+
+# Brute Force Detector 6
+def detect_brute_force(logs):
+    ip_fail_count = {}
+    suspicious_ips = set()
+
+    for log in logs:
+        parts = log.split(" ")
+        ip = parts[0]
+        status = parts[1]
+
+        if status == "LOGIN_SUCCESS":
+            ip_fail_count[ip] = 0
+        elif status == "LOGIN_FAIL":
+            if ip in ip_fail_count:
+                ip_fail_count[ip] = 1
+            else:
+                ip_fail_count[ip] += 1
+        if ip_fail_count[ip] >= 3:
+            suspicious_ips.add(ip)
+    return suspicious_ips
+
+
+logs = [
+    "192.168.1.1 LOGIN_FAIL user=admin",
+    "192.168.1.1 LOGIN_FAIL user=admin",
+    "192.168.1.1 LOGIN_FAIL user=root",
+    "10.0.0.5 LOGIN_FAIL user=test",
+    "10.0.0.5 LOGIN_SUCCESS user=test"
+]
+
+detect_brute_force(logs)

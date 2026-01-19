@@ -180,4 +180,12 @@ logs = [
     "10.0.0.5 LOGIN_SUCCESS user=test"
 ]
 
-detect_brute_force(logs)
+# Sorted? yes? no? how? 7
+def is_sorted_and_how(arr):
+    if arr == sorted(arr):
+        return "yes, ascending"
+    if arr == sorted(arr, reverse=True):
+        return "yes, descending"
+    else:
+        return "no"
+

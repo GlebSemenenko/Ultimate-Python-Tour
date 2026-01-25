@@ -21,8 +21,6 @@ with open("ex.txt", "r", encoding="utf-8") as f: # лучше открывать
         print(line)
 
 
-
 # Путь к файлам
-
 # Относительный путь "src/6.files/ex.txt"
 # Абсолютный путь "C:\Users\user\Documents\Projects\Ultimate-Python-Tour\src\6.files\ex.txt"

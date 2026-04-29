@@ -38,5 +38,7 @@ if toppings:
 else:
     print(0)
 
-
+temp = 25
+if 0 < temp < 30: # короткий вариант записи
+    print("")
 

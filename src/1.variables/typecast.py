@@ -21,4 +21,6 @@ print(type(i))
 # new_float = float(s) # ошибка так делать нельзя
 
 si = int(si)
-print(si) 
+print(si)
+
+print(type(50 / 2.5)) # float

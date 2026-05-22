@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Александр Овечкин | Главная</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb4d);
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+            padding: 20px 30px;
+        }
+
+        header {
+            background: #0a1f44;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #0a1f44;
+            background: #fdbb4d;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav a:hover {
+            background: #b21f1f;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .text-box {
+            flex: 2;
+            min-width: 250px;
+        }
+
+        .image-box {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border: 3px solid #fdbb4d;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #0a1f44;
+            border-left: 6px solid #b21f1f;
+            padding-left: 15px;
+            margin: 20px 0 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .sources {
+            margin-top: 40px;
+            background: #f4f4f8;
+            padding: 20px;
+            border-radius: 16px;
+            border-left: 5px solid #b21f1f;
+        }
+
+        .sources h3 {
+            margin-bottom: 10px;
+            color: #0a1f44;
+        }
+
+        .sources ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .sources li {
+            margin-bottom: 8px;
+        }
+
+        .sources a {
+            color: #b21f1f;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .sources a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Александр Овечкин</h1>
+            <p>Легенда мирового хоккея, гордость России</p>
+        </header>
+
+        <nav>
+            <a href="index.html">🏠 Главная</a>
+            <a href="career.html">🥅 Карьера и достижения</a>
+        </nav>
+
+        <div class="content">
+            <div class="text-box">
+                <h2>Кто такой Александр Овечкин?</h2>
+                <p><strong>Александр Михайлович Овечкин</strong> (род. 17 сентября 1985, Москва) — российский хоккеист, правый нападающий и капитан клуба «Вашингтон Кэпиталз» в Национальной хоккейной лиге (НХЛ). Он считается одним из лучших снайперов в истории хоккея и настоящим символом отечественного спорта.</p>
+
+                <p>Своей невероятной игрой, мощными бросками и безграничной преданностью делу Овечкин прославил не только Москву, но и всю Россию на мировой арене. Миллионы болельщиков по всему миру знают его фирменный клич «Ovi!» и легендарный «овальный» бросок с левого круга вбрасывания.</p>
+
+                <p>За свою карьеру Овечкин установил множество рекордов: он — девятикратный обладатель «Морис Ришар Трофи» (приз лучшему снайперу сезона НХЛ), трёхкратный MVP регулярного чемпионата («Харт Трофи»), лучший российский снайпер в истории НХЛ и один из лидеров по голам за всю лигу.</p>
+
+                <p>В 2018 году Овечкин привёл «Вашингтон Кэпиталз» к первому в истории клуба Кубку Стэнли, став самым ценным игроком плей-офф («Конн Смайт Трофи»). Эта победа стала триумфом для всего российского хоккея и лично для Александра, который долгие годы шёл к этой мечте.</p>
+            </div>
+            <div class="image-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Alex_Ovechkin_2017-03-28.jpg/400px-Alex_Ovechkin_2017-03-28.jpg" alt="Александр Овечкин в форме Вашингтон Кэпиталз">
+                <p style="font-size: 0.8rem; margin-top: 8px;">Александр Овечкин, 2017 год</p>
+            </div>
+        </div>
+
+        <div class="sources">
+            <h3>📚 Источники информации</h3>
+            <ul>
+                <li>🔗 <a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B2%D0%B5%D1%87%D0%BA%D0%B8%D0%BD,_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%B8%D1%87" target="_blank">Википедия: Александр Овечкин</a></li>
+                <li>🔗 <a href="https://www.nhl.com/capitals/player/alex-ovechkin-8471214" target="_blank">Официальный профиль на NHL.com</a></li>
+                <li>🔗 <a href="https://www.championat.com/hockey/article-4089857-aleksandr-ovechkin-biografiya-lichnaya-zhizn-dostizheniya-statistika-rekordy-foto.html" target="_blank">Championat.com — биография и рекорды</a></li>
+                <li>🔗 <a href="https://www.sports.ru/tribuna/blogs/ovi8/3060031.html" target="_blank">Sports.ru — история легендарного броска Овечкина</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>© 2025 Сайт об Александре Овечкине. </p>
+            <p>Семененко Г.В.</p>
+        </footer>
+    </div>
+</body>
+</html>

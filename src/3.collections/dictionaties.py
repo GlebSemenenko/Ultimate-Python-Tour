@@ -12,7 +12,7 @@
 # Создание словаря
 
 empty_dict = {} # пустой словарь
-literal_dict = {1:1} # создание словря из литерала
+literal_dict = {1:1} # создание словаря из литерала
 from_dict_func = dict ({"a":1,"b":1}) # {'a': 1, 'b': 1}
 d = dict (short='dict', long='dictionary') # {'short': 'dict', 'long': 'dictionary'
 #from_dict_func2 = dict (["a":1],["b":1])
@@ -57,11 +57,11 @@ print(type(items)) # получаем набор ключей
 
 dict1 = {"a":1,"c":3}
 dict2 = {"a":2,"d":3}
-merged = dict1 | dict2 # Если будут конфлиты dict2 перекроет dict1
+merged = dict1 | dict2 # Если будут конфликты dict2 перекроет dict1
 print(merged) # {'a': 2, 'c': 3, 'd': 3}
 
 
-# Иттерация по словарям 
+# Итерация по словарям
 
 mp = {
     1:1,
@@ -70,16 +70,16 @@ mp = {
 }
 print(mp)
 
-for k, v in mp.items(): # иттерация по ключам/значениям
+for k, v in mp.items(): # итерация по ключам/значениям
     print(k,v)
 
-for k in mp.keys(): # иттерация по ключам
+for k in mp.keys(): # итерация по ключам
     print(k)
 
-for k in mp: # иттерация по ключам 
+for k in mp: # итерация по ключам
     print(k)
 
-for v in mp.values(): # иттерация по значениям
+for v in mp.values(): # итерация по значениям
     print(v)
 
 

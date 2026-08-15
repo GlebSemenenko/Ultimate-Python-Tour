@@ -26,7 +26,7 @@ def count_of_vowels(input_text: str) -> int: # нельзя ничего доб�
     return count
 
 count_of_vowels("Kafka")
-count_of_vowels(1)
+#count_of_vowels(1)
 
 # Значение аргументов по умолчанию
 def arg_fn(a1, a2 = "A2", a3: str = "A3"):
@@ -62,6 +62,14 @@ def format_date(*, day: int, month: str): # * означает что при в�
     print(day, " of ", month)
 
 format_date(day=1, month="October")
-# format_date(1, "October") # ОШИБКА ПРИ ЗАПУСКЕ  
+# format_date(1, "October") # ОШИБКА ПРИ ЗАПУСКЕ
+
+
+
+def prt (i: str) -> str:
+    return type(i)
+
+a = prt(1)
+print(a)
 
 
